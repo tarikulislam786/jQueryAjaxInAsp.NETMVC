@@ -1,0 +1,82 @@
+﻿@model jQueryAjaxInAsp.NETMVC.Models.User
+@{
+    Layout = null;
+}
+<link href="~/Content/animate.css" rel="stylesheet" />
+<link href="~/Content/style.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <style>
+        #login-div{
+           /*position:absolute;
+            left:40%;
+            top:40%;*/ 
+            width: 500px;
+            margin: 90px auto;
+            border:1px solid #ccc;
+            padding:10px 10px;
+        }
+        .fifty-fifty{width: 48%;float: left;}
+        .fifty-container{width: 100%;}
+        .field-validation-error{color:red;}
+        .bg{background-image:url(../../AppFiles/Images/bg.png)}
+    </style>
+</head>
+<body class="bg">
+    <div id="login-div" class="triggerAnimation animated fadeInUp">
+
+        @using (Html.BeginForm("Authorize", "Login", FormMethod.Post, new { @class = "comment-form" }))
+        {
+            <div class="triggerAnimation animated bounceIn"><h2 style="text-align:center;color:#1ab5b3"> Login </h2></div>
+           
+                
+                // @Html.LabelFor(model => model.Username)
+                <div class="float-input">
+                    
+                    @Html.EditorFor(model => model.Username)
+                    <span><i class="fa fa-user"></i></span>
+                 </div>
+                <div class="validationmessage" style="padding-top: 10px;padding-bottom: 10px;">
+                    @Html.ValidationMessageFor(model => model.Username)
+                </div>
+
+
+
+            // @Html.LabelFor(model => model.Password)
+            <div class="float-input">
+                @Html.EditorFor(model => model.Password)
+                <span><i class="fa fa-key"></i></span>
+            </div>
+            <div class="validationmessage" style="padding-top: 10px;padding-bottom: 10px;">
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+            <div class="validationmessage" style="padding-bottom: 10px;">
+                <label class="field-validation-error">
+                    @Html.DisplayFor(model => model.LoginErrorMessage)
+                </label>
+            </div>
+            <div class="fifty-container">
+                <div class="fifty-fifty triggerAnimation animated fadeInLeft" style="margin-right:4%">
+                     <input type="submit" value="Login" id="submit_contact" class="main-button" />
+                </div>
+                <div class="fifty-fifty triggerAnimation animated fadeInRight">
+                      <input type="reset" value="Clear" class="main-button" />
+                </div>
+             </div>
+
+
+                }
+
+            </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

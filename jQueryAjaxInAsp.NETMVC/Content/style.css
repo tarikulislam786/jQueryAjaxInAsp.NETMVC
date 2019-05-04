@@ -1,0 +1,133 @@
+﻿
+/*-------------------------------------------------*/
+
+
+.comment-form {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.comment-form h1 {
+    font-size: 24px;
+    text-transform: inherit;
+    margin-bottom: 16px;
+}
+
+.float-input {
+    position: relative;
+    padding-left: 58px;
+}
+
+.float-input span {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    border: 1px solid #eaeaea;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    text-align: center;
+}
+
+.float-input span i {
+    line-height: 32px;
+    font-size: 12px;
+    color: #1ab5b3;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid #1ab5b3;
+    margin-top: 13px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.comment-form input[type="text"],
+#contact-form textarea,
+.comment-form input[type="text"],.comment-form input[type="password"],
+.comment-form textarea {
+    color: #848484;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #eaeaea;
+    border-left: none;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    display: block;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;  
+}
+
+.comment-form input[type="text"]:focus + span i,
+.comment-form input[type="text"]:focus + span i, .comment-form input[type="password"]:focus + span i {
+    color: #fff;
+    background: #1ab5b3;
+}
+
+.comment-form textarea,
+form textarea {
+    height: 126px;
+    border: 1px solid #eaeaea;
+}
+
+.comment-form input[type="submit"],
+.comment-form input[type="submit"], .comment-form input[type="reset"] {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    padding: 19px;
+    background: #1ab5b3;
+    text-transform: uppercase;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.comment-form input[type="submit"]:hover,
+.comment-form input[type="submit"]:hover,.comment-form input[type="reset"]:hover {
+    opacity: 0.8;
+}
+
+.comment-form .message,
+.comment-form .message {
+    height:20px;
+    font-size:13px;
+    font-family: 'Open Sans', sans-serif;
+    float: none;
+    margin-top: 5px;
+}
+
+#contact-form .message.error,
+.comment-form .message.error {
+    color:#eb2c06;
+}
+
+.comment-form .message.success,
+.comment-form .message.success {
+    color:#1e9397;
+}
+
+
